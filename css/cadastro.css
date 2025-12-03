@@ -6,6 +6,10 @@
     font-family: "Inter", sans-serif;
 }
 
+body{
+    overflow-y:hidden   ;
+}
+
 /* CORES DO PROJETO */
 :root {
     --header-green: #1c5d31;
@@ -16,7 +20,7 @@
 /* HEADER */
 header {
     width: 100%;
-    height: 70px;
+    height: 4rem;
     background: var(--header-green);
     display: flex;
     justify-content: space-between;
@@ -28,11 +32,11 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .logo-icon {
-    width: 200px;
+    width: 12.5rem;
     height: 50px;
     background-image: url(/2730d5b3-2b6c-44fa-9f46-1a5a79f5cb43\ 2\ \(1\).png);
     border-radius: 10px;
@@ -63,34 +67,38 @@ main {
     width: 100%;
     background: var(--light-green);
     display: flex;
-    justify-content: center;      /* deixa no centro horizontal */
-    align-items: center;          /* deixa no centro vertical */
-    padding: 20px;
-    min-height: calc(100vh - 70px);  /* ocupa a tela toda menos o header */
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
 }
 
-
-/* LADO ESQUERDO */
+/* LADO ESQUERDO - IMAGEM */
 .left-box {
     display: flex;
     width: 60%;
-    height: 790px;
-    background-image: url(/bCwIkyXXk4ybnepTD3UcJ23lpuwFyOgluVYWsS0w\ \(1\)\ 1.png);
+    height: 50rem;
+    background-image: url("/bCwIkyXXk4ybnepTD3UcJ23lpuwFyOgluVYWsS0w\ \(1\)\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100dvh;
 }
 
 /* CARD DE CADASTRO */
 .card {
-    width: 540px;
-    background: rgba(255, 255, 255, 0.25);
+    width: 35rem;
+    background: #e8fce3;
     border: 4px solid #2a6b2a;
     border-radius: 20px;
     padding: 25px;
     margin-right: 80px;
     display: flex;
     flex-direction: column;
-    align-items: center;  
-    gap: 1rem;  
-    
+    align-items: center;
+    gap: 1rem;
 }
 
 .card h2 {
@@ -103,7 +111,7 @@ main {
     align-self: flex-start;
     margin-top: 10px;
     margin-left: 5px;
-    font-size: 14px;
+    font-size: 1.4rem; /* Ajustado para consistência */
     color: #1d4a1d;
 }
 
@@ -113,14 +121,19 @@ main {
     border: 4px solid var(--input-green);
     border-radius: 10px;
     outline: none;
-    background: #f8fff8;
+    background: #8faa8f;
     line-height: 2rem;
+}
+
+input::placeholder {
+    font-size: 0.9rem;
+    color: #000000;
 }
 
 /* BOTÕES FB E GOOGLE */
 .social-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     margin-top: 25px;
 }
@@ -128,23 +141,18 @@ main {
 .fb, .google {
     width: 48%;
     padding: 7px;
+    border: 4px solid var(--input-green);
     border-radius: 10px;
-    border: 1px solid #333;
-    background: #ffffff;
+    background: #8faa8f;
+    color: #000000;
     cursor: pointer;
 }
 
-
-input::placeholder{
-font-size: 0.9rem;
+/* TEXTO DE CONTA */
+.conta {
+    color: #000000;
 }
 
-
-.label{
-    font-size: 1.4rem;
-}
-
-
-.conta{
-     color: #1d4a1d;
+.icon x{
+    background-image: url(/Icone\ x.avif);
 }
